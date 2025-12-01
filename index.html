@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>داتابەیسی کتێبخانە</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>زیادکردنی کتێبی نوێ</h1>
+
+        <form action="index.php" method="POST">
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="title">ناونیشانی کتێب:</label>
+                    <input type="text" id="title" name="title" required placeholder="ناوی کتێبەکە بنووسە">
+                </div>
+                <div class="form-group">
+                    <label for="author">نووسەر:</label>
+                    <input type="text" id="author" name="author" required placeholder="ناوی نووسەر">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="genre">ژانەر (جۆر):</label>
+                    <select id="genre" name="genre" required>
+                        <option value="" disabled selected>جۆرێک هەڵبژێرە</option>
+                        <option value="ڕۆمان / چیرۆک">ڕۆمان / چیرۆک</option>
+                        <option value="نا-خەیاڵی">نا-خەیاڵی</option>
+                        <option value="زانستی">زانستی</option>
+                        <option value="مێژوو">مێژوو</option>
+                        <option value="ئەدەب">ئەدەب</option>
+                        <option value="ئاینی">ئاینی</option>
+                        <option value="تەکنەلۆژیا">تەکنەلۆژیا</option>
+                        <option value="شیعر">شیعر</option>
+                        <option value="هیتر">هیتر</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="language">زمان:</label>
+                    <select id="language" name="language" required>
+                        <option value="کوردی">کوردی</option>
+                        <option value="ئینگلیزی">ئینگلیزی</option>
+                        <option value="عەرەبی">عەرەبی</option>
+                        <option value="فارسی">فارسی</option>
+                        <option value="تورکی">تورکی</option>
+                        <option value="هیتر">هیتر</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="publisher">بڵاوکار (دەزگای چاپ):</label>
+                    <input type="text" id="publisher" name="publisher">
+                </div>
+                <div class="form-group">
+                    <label for="publication_year">ساڵی چاپ:</label>
+                    <input type="number" id="publication_year" name="publication_year" min="1000" max="2026" placeholder="2025" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="edition">نۆرەی چاپ:</label>
+                    <input type="text" id="edition" name="edition" placeholder="نموونە: چاپی دووەم" required>
+                </div>
+                <div class="form-group">
+                    <label for="no_of_pages">ژمارەی پەڕە:</label>
+                    <input type="number" id="no_of_pages" name="no_of_pages" min="1">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="quantity">ژمارەی بەردەست:</label>
+                    <input type="number" id="quantity" name="quantity" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="price">نرخ (دیناری عێراقی):</label>
+                    <input type="number" id="price" name="price" min="0" placeholder="250" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group full-width">
+                    <label for="description">پوختە (وەسف):</label>
+                    <textarea id="description" name="description" rows="5" placeholder="کورتەیەک دەربارەی کتێبەکە..."></textarea>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <input type="submit" name="submit" value="زیادکردنی کتێب">
+                <input type="submit" name="show" value="نیشاندان" formnovalidate>
+                <input type="reset" name="reset" value="پاککردنەوە">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
